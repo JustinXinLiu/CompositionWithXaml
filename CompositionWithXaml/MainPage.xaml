@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="CompositionWithXaml.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CompositionWithXaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid x:Name="BottomLayer" Background="#FFE95252" Width="320" Height="400" VerticalAlignment="Top" Margin="24">
+            <Button Content="Bottom" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Grid>
+        <Grid x:Name="TopLayer" Background="#FF529AE9" Width="200" Height="200" VerticalAlignment="Center" Margin="24">
+            <Button Content="Top" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Grid>
+
+        <Button x:Name="RotateTopLayer" IsEnabled="False" Click="AnimateTopLayer_Click" Content="Rotate top layer" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="24" />
+        <Button x:Name="RotateBottomLayer" IsEnabled="False" Click="AnimateBottomLayer_Click" Content="Rotate bottom layer" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="24" />
+    </Grid>
+</Page>
